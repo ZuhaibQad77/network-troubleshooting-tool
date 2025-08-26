@@ -40,7 +40,7 @@
 </head>
 <body>
   <h1>Network Troubleshooting Tool</h1>
-  
+
   <h2>DNS Lookup</h2>
   <input id="dnsInput" placeholder="Enter domain (e.g., example.com)" />
   <button onclick="dnsLookup()">Lookup DNS</button>
@@ -89,12 +89,11 @@
           result.textContent = 'Invalid IP or no info found.';
           return;
         }
-        result.textContent = `
-IP: ${data.ip}
+        result.textContent =
+`IP: ${data.ip}
 Location: ${data.city}, ${data.region}, ${data.country}
 ISP: ${data.connection.isp}
-Type: ${data.type}
-        `;
+Type: ${data.type}`;
       } catch (e) {
         result.textContent = 'Error fetching IP info.';
       }
